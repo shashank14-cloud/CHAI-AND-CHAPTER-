@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Spice Route Kitchen</title>
+  <meta name="description" content="Spice Route Kitchen is an Indian restaurant in Pune serving regional thalis, biryani and tandoor classics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&amp;family=DM+Sans:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    /* Runs before the page paints so a saved dark theme does not flash white. */
+    (function () {
+      try {
+        var t = localStorage.getItem('sr-theme');
+        if (!t && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">Spice Route <span>Kitchen</span></a>
+      <nav aria-label="Main navigation" class="header-actions">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Book a Table</a></li>
+        </ul>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">☾</button>
+        <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">☰</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <div>
+          <h1 id="hero-title">Regional Indian food, cooked slowly.</h1>
+          <p>From Punjabi tandoor to Kerala coconut curries, every dish is made from scratch with whole spices ground in our own kitchen.</p>
+          <div class="btn-row">
+            <a class="btn" href="contact.html">Book a table</a>
+            <a class="btn btn-outline" href="menu.html">See the menu</a>
+          </div>
+        </div>
+        <img src="images/hero-thali.svg" width="600" height="450" alt="Round thali with five bowls of curries, rice and bread">
+      </div>
+    </section>
+
+    <section aria-labelledby="fav-title">
+      <div class="wrap">
+        <div class="section-head">
+          <h2 id="fav-title">Three things people come back for</h2>
+        </div>
+        <div class="card-grid">
+          <article class="card">
+            <img src="images/biryani.svg" width="600" height="450" loading="lazy" alt="Steaming bowl of chicken biryani with herbs on a golden background">
+            <div class="card-body">
+              <h3>Hyderabadi dum biryani</h3>
+              <p>Slow-cooked in a sealed pot with saffron rice and raita.</p>
+              <p class="price">₹320</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/paneer-tikka.svg" width="600" height="450" loading="lazy" alt="Skewer of paneer tikka cubes with peppers on a green background">
+            <div class="card-body">
+              <h3>Paneer tikka</h3>
+              <p>Marinated overnight and charred in the tandoor.</p>
+              <p class="price">₹260</p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/gulab-jamun.svg" width="600" height="450" loading="lazy" alt="Plate of gulab jamun in sugar syrup on a purple background">
+            <div class="card-body">
+              <h3>Gulab jamun</h3>
+              <p>Two warm dumplings in cardamom syrup.</p>
+              <p class="price">₹110</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="about-title">
+      <div class="wrap split">
+        <img src="images/chef.svg" width="600" height="450" loading="lazy" alt="Illustration of a chef in a white uniform and tall hat" style="border-radius:var(--radius)">
+        <div>
+          <h2 id="about-title">A kitchen that grinds its own masala</h2>
+          <p>Spice Route Kitchen began with a family recipe notebook and ten tables. Today our chefs cook dishes from six Indian regions, and every spice blend is roasted and ground fresh each morning.</p>
+          <p>Come for the Sunday family thali or a quiet weekday lunch. Every dish can be made mild, medium or spicy.</p>
+          <p><a href="gallery.html">Take a look around in the gallery</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="notice">
+          <h2 id="cta-title">Planning a family dinner or birthday?</h2>
+          <p>Tables for up to 12 people can be reserved online. Pick a date and we will confirm by email.</p>
+          <a class="btn" href="contact.html">Reserve a table</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <section>
+        <h2>Spice Route Kitchen</h2>
+        <p>Regional Indian cooking from Punjab to Kerala, made from scratch since 2015.</p>
+      </section>
+      <section>
+        <h2>Visit us</h2>
+        <address>
+          12, Lane 5, Koregaon Park<br>
+          Pune, Maharashtra 411001<br>
+          <a href="tel:+912012345678">+91 20 1234 5678</a>
+        </address>
+      </section>
+      <section>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Book a table</a></li>
+        </ul>
+      </section>
+    </div>
+    <p class="copyright">&copy; <span id="year">2026</span> Spice Route Kitchen. A student project for Web Technology.</p>
+  </footer>
+  <button class="icon-btn" id="backToTop" type="button" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
